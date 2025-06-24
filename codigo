@@ -1,0 +1,27 @@
+# Mensagem de boas-vindas a loja
+print('Bem-Vindo a Loja do João Vitor')
+
+# Cliente digita o valor unitário do produto
+valorunitario = float(input('Digite o valor do produto: '))
+# Cliente digita a quantidade do produto
+quantidade = int(input('Digite a quantidade de produtos: '))
+
+# Determina como o valor total sem desconto será calculado
+valor_total_sem_desconto = valorunitario * quantidade
+
+# Faz o if do programa onde determina se o produto será com ou sem desconto
+if valor_total_sem_desconto < 2500:
+    desconto = 0
+elif valor_total_sem_desconto >= 2500 and valor_total_sem_desconto <= 6000:
+    desconto = 0.04
+elif valor_total_sem_desconto > 6000 and valor_total_sem_desconto <= 10000:
+    desconto = 0.07
+else:
+    desconto = 0.11
+
+# Calcula o valor do produto final com ou sem desconto
+valor_total_com_desconto = valor_total_sem_desconto - (valor_total_sem_desconto * desconto)
+
+# Faz o print dos valores com desconto e sem desconto
+print('Valor SEM desconto: R$', valor_total_sem_desconto)
+print('Valor COM desconto: R$', valor_total_com_desconto)
